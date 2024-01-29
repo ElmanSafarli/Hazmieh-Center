@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400;1,500;1,600;1,700&display=swap');
+
+@font-face {
+    font-family: "JejuGothic";
+    src: url("./fonts/JejuGothic-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #0D1023;
+    /* 0D1023 */
+}
+
+/* Navbar */
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 22px 4%;
+}
+
+.nav-logo {
+    color: #FFF;
+    font-family: "JejuGothic";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.nav-items ul {
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-items ul li {
+    margin: 0 18px;
+    list-style: none;
+}
+
+.nav-items ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.nav-search-box {
+    width: 156px;
+    height: 47px;
+    border-radius: 24px;
+    background: #232323;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav-search-box input {
+    color: #FFF;
+    font-family: "JejuGothic";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 100%;
+    background: transparent;
+    width: 70%;
+    padding-left: 20px;
+    width: 90px;
+    outline: none;
+    border: none;
+}
+
+.nav-search-box input::placeholder {
+    color: #fff;
+}
+
+.nav-search-box button {
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 14px;
+}
+
+.nav-search-box button img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Sidebar */
+.sidebar {
+    display: none;
+}
+
+.hamburger {
+    cursor: pointer;
+    position: absolute;
+    top: 22px;
+    right: 4%;
+    z-index: 999;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    height: 3em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: #232323;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked+svg .line {
+    stroke: #612421;
+}
+
+.hamburger input:checked+svg {
+    transform: rotate(-45deg);
+}
+
+.hamburger input:checked+svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
+
+/* Sidebar content */
+#toggleSidebar {
+    display: none;
+}
+
+.sidebar-content {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: right 0.3s ease-in-out;
+    z-index: 998;
+}
+
+#toggleSidebar:checked~.sidebar-content {
+    right: 0;
+}
+
+.sidebar-logo {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.sidebar-logo img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 18px;
+}
+
+.sidebar-logo p {
+    background: #232323;
+    padding: 12px 25px;
+    margin: 0 4%;
+    border-radius: 16px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+
+.sidebar-items {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sidebar-items ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-items ul li {
+    margin: 8px 0;
+}
+
+.sidebar-items ul li a {
+    text-decoration: none;
+    color: #595959;
+    text-align: center;
+    font-family: 'Poppins';
+}
+
+.sidebar-items ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 160px 4% 78px 4%;
+}
+
+.header-title {
+    width: 395px;
+}
+
+.header-title p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #FFF;
+    font-family: "JejuGothic";
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.header-title span {
+    color: #DDFF56;
+    font-family: "JejuGothic";
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.header-info p {
+    width: 390px;
+    color: #595959;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.header-btn {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.header-btn button:first-child {
+    border-radius: 39px;
+    background: #DDFF56;
+    color: #0D1023;
+    padding: 17px 47px;
+    font-family: "JejuGothic";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: normal;
+    margin-right: 20px;
+}
+
+.header-btn button:nth-child(2) {
+    background-color: #232323;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.branch-box-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 8px;
+    grid-row-gap: 0px;
+    margin: 0 4%;
+}
+
+.branch-box a {
+    text-decoration: none;
+}
+
+.branch-box :hover~p {
+    color: #DDFF56 !important;
+}
+
+.branch-box a img {
+    width: 100%;
+    height: 251px;
+    border-radius: 12px;
+}
+
+.branch-box a p {
+    color: #FFF;
+    font-family: "JejuGothic";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+
+    /* Navabar */
+    .sidebar {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    /* Header */
+    .branch-box-group {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .branch-box a img {
+        height: 330px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    /* Header */
+    .header-top {
+        display: block;
+        margin: 140px 4% 78px 4%;
+    }
+
+    .branch-box a img {
+        height: 280px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    /* Header */
+    .branch-box a img {
+        height: 220px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    /* Header */
+    .header-top {
+        display: block;
+        margin: 140px 4% 78px 4%;
+    }
+
+    .header-title, .header-info p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+
+    /* Header */
+    .header-title span {
+        font-size: 68px;
+    }
+
+    .header-title p {
+        font-size: 60px;
+    }
+
+    .header-btn button:first-child {
+        font-size: 22px;
+        padding: 14px 40px;
+    }
+
+    .branch-box a img {
+        height: 130px;
+    }
+
+    .branch-box a p {
+        font-size: 14px;
+    }
+
+    .header-top {
+        margin: 110px 4% 50px 4%;
+    }
+}
